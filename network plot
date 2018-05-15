@@ -8,4 +8,4 @@ mmnet <- merge(madmen$edges, madmen$vertices,
 
 # Finish the ggplot command
 ggplot(data = mmnet, aes(from_id = Name1, to_id = Name2)) +
-  geom_net(aes(col = Gender, size = 6, linewidth = 1, labelon = TRUE, fontsize = 3, labelcolour = "black"))
+  geom_net(aes(col = Gender), size = 6, linewidth = 1, labelon = TRUE, fontsize = 3, labelcolour = "black")
