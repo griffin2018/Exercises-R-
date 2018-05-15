@@ -1,0 +1,6 @@
+# Load ggtern
+library(ggtern)
+
+# Build ternary plot
+ggtern(africa, aes(x = Sand, y = Silt, z = Clay)) +
+  geom_point(shape = 16, alpha = 0.2)
