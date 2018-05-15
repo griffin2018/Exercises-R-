@@ -4,3 +4,12 @@ library(ggtern)
 # Build ternary plot
 ggtern(africa, aes(x = Sand, y = Silt, z = Clay)) +
   geom_point(shape = 18, alpha = 0.1)
+
+# Plot 1
+ggtern(africa, aes(x = Sand, y = Silt, z = Clay)) +
+  geom_density_tern()
+
+# Plot 2
+ggtern(africa, aes(x = Sand, y = Silt, z = Clay)) +
+  stat_density_tern(geom = "polygon", aes(alpha = ..level.., fill = ..level..)) +
+  guides(fill = FALSE)
